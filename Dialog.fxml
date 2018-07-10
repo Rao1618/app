@@ -1,0 +1,48 @@
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<DialogPane fx:controller="application.DialogController"
+            xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: #ffffff; -fx-border-color: white" prefHeight="100" prefWidth="450" >
+    <content>
+        <GridPane hgap="20" vgap="10" alignment="TOP_CENTER" prefHeight="1000">
+            <Label text="Item name:" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                <font>
+                    <Font name="Calibri " size="16" />
+                </font>
+            </Label>
+            <TextField fx:id="name" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="9"/>
+            <Label text="Price:" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                <font>
+                    <Font name="Calibri " size="15" />
+                </font>
+            </Label>
+            <TextField fx:id="price" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="9"/>
+            <Label text="Quantity:" GridPane.rowIndex="2" GridPane.columnIndex="0">
+                <font>
+                    <Font name="Calibri " size="16" />
+                </font>
+            </Label>
+            <TextField fx:id="quantity" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="9"/>
+            <HBox  GridPane.rowIndex="6" GridPane.columnSpan="10" spacing="10">
+                <Button fx:id="Add" text="Add" onAction="#addNewMed"/>
+                <Button fx:id="Update" text="Update" onAction="#updateMed"/>
+                <Button fx:id="ClearText" text="Clear text fields" onAction="#clear"/>
+            </HBox>
+
+            <Label fx:id="success" text=" " GridPane.rowIndex="9" textFill="#00ff00" visible="false" >
+                <font>
+                    <Font size="16"/>
+                </font>
+            </Label>
+            <Label fx:id="invalid" text="  Invalid inputs!" GridPane.rowIndex="9" textFill="red" visible="false" >
+                <font>
+                    <Font size="20"/>
+                </font>
+            </Label>
+        </GridPane>
+    </content>
+</DialogPane>
